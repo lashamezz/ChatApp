@@ -20,12 +20,12 @@ class RegistrationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
+        supportActionBar?.hide()
 
         mAuth= FirebaseAuth.getInstance()
 
         registerUserEmail = findViewById(R.id.regActivityMail)
         registerPassword = findViewById(R.id.registerPasswordEdit)
-        checkPass = findViewById(R.id.checkPasswordEditText)
         registerUserButton=findViewById(R.id.profileRegisterButton)
 //        signupRegister=findViewById(R.id.profileSignUpButton)
 
@@ -33,10 +33,8 @@ class RegistrationActivity : AppCompatActivity() {
             val email = registerUserEmail.text.toString()
             val pass = registerPassword.text.toString()
             val checkedPass = checkPass.text.toString()
-            if(email.isEmpty() || pass.isEmpty() || checkedPass.isEmpty()){
+            if(email.isEmpty() || pass.isEmpty()){
                 Toast.makeText(this,"Empty", Toast.LENGTH_SHORT).show()
-            }else if(pass!=checkedPass){
-                Toast.makeText(this,"Passwords Don't Match", Toast.LENGTH_SHORT).show()
             }else{
                 mAuth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener { task->
                     if(task.isSuccessful){

@@ -1,11 +1,12 @@
 package com.example.chatify
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.chatify.Fragments.FragmentProfile
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
 
         mAuth = FirebaseAuth.getInstance()
 
@@ -28,17 +30,23 @@ class MainActivity : AppCompatActivity() {
         userUpButton=findViewById(R.id.profileSignUpButton)
 
         userInButton.setOnClickListener {
-            val email = loginUserMail.text.toString()    // amovikitxot informacia
+            val email = loginUserMail.text.toString()
             val password = userPassword.text.toString()
-            if (email.isEmpty() || password.isEmpty()){  //tu carielia vachvenot mcire mesiji
-                Toast.makeText(this,"Empty",Toast.LENGTH_SHORT).show()
+            if (email.isEmpty() || password.isEmpty()){
+
+                Toast.makeText(this, "Empty", Toast.LENGTH_SHORT).show()
+
             }else{
-                mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener { task->
+
+                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task->
                     if(task.isSuccessful){
-                        startActivity(Intent(this,NavigationActivity::class.java))
+                        startActivity(Intent(this, NavigationActivity::class.java))
                         finish()
+
                     }else{
-                        Toast.makeText(this,"Error!!",Toast.LENGTH_SHORT).show()
+
+                        Toast.makeText(this, "Error!!", Toast.LENGTH_SHORT).show()
+
                     }
 
                 }
@@ -46,7 +54,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         userUpButton.setOnClickListener {
-            startActivity(Intent(this,RegistrationActivity::class.java))
+            startActivity(Intent(this, RegistrationActivity::class.java))
         }
 
 

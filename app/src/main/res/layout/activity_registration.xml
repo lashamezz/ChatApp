@@ -44,13 +44,22 @@
             android:textColor="@color/lightchatapp"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/register_username"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="Name"
-            android:textColor="@color/lightchatapp"
-            android:textColorHint="#ACACAC" />
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_username"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:textColor="@color/white"
+                android:ems="10"
+                android:inputType="textPersonName"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Space
             android:layout_width="match_parent"
@@ -65,38 +74,44 @@
             android:textColor="@color/lightchatapp"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/regActivityMail"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:textColor="@color/lightchatapp"
-            android:textColorHint="#ACACAC" />
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regActivityMail"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:textColor="@color/white"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="10dp" />
 
-        <EditText
-            android:id="@+id/registerPasswordEdit"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="Password "
-            android:inputType="textPassword"
-            android:textColor="@color/lightchatapp"
-            android:textColorHint="#ACACAC"
-            app:passwordToggleEnabled="true" />
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <EditText
-            android:id="@+id/checkPasswordEditText"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="check pass "
-            android:inputType="textPassword"
-            android:textColor="@color/lightchatapp"
-            android:textColorHint="#ACACAC"
-            app:passwordToggleEnabled="true" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/registerPasswordEdit"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:textColor="@color/white"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:passwordToggleEnabled="true"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/profileRegisterButton"
