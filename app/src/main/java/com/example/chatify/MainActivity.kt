@@ -40,7 +40,9 @@ class MainActivity : AppCompatActivity() {
 
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task->
                     if(task.isSuccessful){
-                        startActivity(Intent(this, NavigationActivity::class.java))
+                        val bundle = Bundle()
+                        bundle.putString("email", loginUserMail.toString())
+                        startActivity(Intent(this, NavigationActivity::class.java), bundle)
                         finish()
 
                     }else{

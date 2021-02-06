@@ -35,31 +35,31 @@
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="what should people call you?"
-            android:textColor="@color/lightchatapp"
-            android:textSize="18sp" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:fontFamily="sans-serif-smallcaps"-->
+<!--            android:text="what should people call you?"-->
+<!--            android:textColor="@color/lightchatapp"-->
+<!--            android:textSize="18sp" />-->
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Username"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Username"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/register_username"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:textColor="@color/white"
-                android:ems="10"
-                android:inputType="textPersonName"
-                />
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/register_username"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="55dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPersonName"-->
+<!--                />-->
 
-        </com.google.android.material.textfield.TextInputLayout>
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
 
         <Space
             android:layout_width="match_parent"
@@ -68,7 +68,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:fontFamily="sans-serif-smallcaps"
             android:text="personal information"
             android:textColor="@color/lightchatapp"
@@ -77,6 +77,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/lightchatapp"
             android:hint="Email Address"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -98,6 +99,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/lightchatapp"
             android:hint="Password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 

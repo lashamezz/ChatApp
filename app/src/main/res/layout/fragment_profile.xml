@@ -36,7 +36,7 @@
         android:fontFamily="@font/manrope_medium"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        android:text="Welcome Back, $username \n click below to proceed to messages"
+        android:text="Welcome Back, \n click below to proceed to messages"
         android:textColor="@color/orangechatapp"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

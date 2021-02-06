@@ -32,7 +32,6 @@ class RegistrationActivity : AppCompatActivity() {
         registerUserButton.setOnClickListener {
             val email = registerUserEmail.text.toString()
             val pass = registerPassword.text.toString()
-            val checkedPass = checkPass.text.toString()
             if(email.isEmpty() || pass.isEmpty()){
                 Toast.makeText(this,"Empty", Toast.LENGTH_SHORT).show()
             }else{
